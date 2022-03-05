@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Advice generator app</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <!-- Advice #Advice ID goes here
+
+  "Advice text goes here" -->
+
+  <section class="main">
+    <div class="main-card">
+      <p class="card-title">advice #<span class="card-title-number"></span></p>
+      <div class="content-container">
+        <p class="card-content">
+        </p>
+      </div>
+
+      <div class="divider">
+        <img src="images/pattern-divider-desktop.svg" class="divider-img" alt="">
+      </div>
+
+      <div class="dice" onclick="reload()">
+        <a href="#"><img src="images/icon-dice.svg" alt=""></a>
+      </div>
+    </div>
+  </section>
+  
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+
+  <script>
+
+
+
+    function newAdvice(x){
+      number.innerHTML(`"${x.slip.id}"`);
+      content.innerHTML(`"${x.slip.advice}"`);
+    }
+
+    
+    fetch("https://api.adviceslip.com/advice")
+
+    .then(response => response.json())
+    
+    .then(data => {
+      let number = document.querySelector(".card-title-number");
+      let content = document.querySelector(".card-content");
+      let diceBtn = document.querySelector(".dice");
+
+      number.innerHTML = `${data.slip.id}`;
+      content.innerHTML = `${data.slip.advice}`;
+    })
+
+
+
+    function reload(){
+      location.reload();
+    }
+
+  </script>
+</body>
+</html>

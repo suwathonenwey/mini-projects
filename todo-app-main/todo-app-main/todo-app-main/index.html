@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Todo app</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="night-mode.css">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+<!-- 
+  Todo
+
+  Add dynamic number items left
+
+  All
+  Active 
+  Completed
+
+  Clear Completed
+
+  Drag and drop to reorder list -->
+
+  <section id="mainPage" class="main">
+    <div class="hero-image" id="hero-img"></div>
+
+    <div class="todo">
+
+      <div class="todo__header">
+      <h3 class="todo__title">todo</h3>
+        <a href="#" class="todo__moon" id="moon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26"><path fill="#FFF" fill-rule="evenodd" d="M13 0c.81 0 1.603.074 2.373.216C10.593 1.199 7 5.43 7 10.5 7 16.299 11.701 21 17.5 21c2.996 0 5.7-1.255 7.613-3.268C23.22 22.572 18.51 26 13 26 5.82 26 0 20.18 0 13S5.82 0 13 0z"/></svg>
+        </a>
+        <a href="#" class="todo__sun" id="sun" style="display: none;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26"><path fill="#FFF" fill-rule="evenodd" d="M13 21a1 1 0 011 1v3a1 1 0 11-2 0v-3a1 1 0 011-1zm-5.657-2.343a1 1 0 010 1.414l-2.121 2.121a1 1 0 01-1.414-1.414l2.12-2.121a1 1 0 011.415 0zm12.728 0l2.121 2.121a1 1 0 01-1.414 1.414l-2.121-2.12a1 1 0 011.414-1.415zM13 8a5 5 0 110 10 5 5 0 010-10zm12 4a1 1 0 110 2h-3a1 1 0 110-2h3zM4 12a1 1 0 110 2H1a1 1 0 110-2h3zm18.192-8.192a1 1 0 010 1.414l-2.12 2.121a1 1 0 01-1.415-1.414l2.121-2.121a1 1 0 011.414 0zm-16.97 0l2.121 2.12A1 1 0 015.93 7.344L3.808 5.222a1 1 0 011.414-1.414zM13 0a1 1 0 011 1v3a1 1 0 11-2 0V1a1 1 0 011-1z"/></svg>
+        </a>
+      </div>
+      <div class="todo__create">
+        <a href="#" class="todo__circle"></a>
+        <input type="text" class="todo__input" id="todo-input" placeholder="Create a new todo...">
+      </div>
+
+      <div class="todo__list">
+        <ul id="todo-ul" class="todo__container">
+
+        </ul>
+
+        <div class="todo__details">
+        <p class="items">
+          <span class="number" id="number">0 </span>
+          items left
+        </p>
+        <div class="choices display-none-choice">
+          <a href="#" class="all" id="all">
+            <h4>All</h4>
+          </a>
+          <a href="#" class="ac-text" id="ac-text">
+            <h4 class="activeText">Active</h4>
+          </a>
+          <a href="#" class="completed" id="completed">
+            <h4 class="completed">Completed</h4>
+          </a>
+        </div>
+        <a href="#" class="clear-completed">Clear Completed</a>
+        </div>
+
+      
+
+      </div>
+      
+      <div class="choices display-block-choice">
+        <a href="#" class="all" id="all">
+          <h4>All</h4>
+        </a>
+        <a href="#" class="ac-text" id="ac-text">
+          <h4 class="activeText">Active</h4>
+        </a>
+        <a href="#" class="completed" id="completed">
+          <h4 class="completed">Completed</h4>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+
+  <script src="jquery.min.js"></script>
+  <!-- <script src="todo.js"></script> -->
+  <script src="app.js"></script>
+
+</body>
+</html>

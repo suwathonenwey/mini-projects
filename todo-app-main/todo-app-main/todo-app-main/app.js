@@ -1,16 +1,19 @@
 let input = document.querySelector("#todo-input");
 let todoUL = document.querySelector("#todo-ul");
 let number = document.querySelector("#number");
+let allClear = document.querySelector(".clear-completed");
 
 
 //add event listener
 input.addEventListener("keyup", addToDo);
 todoUL.addEventListener("click", deleteAndComplete);
+allClear.addEventListener("click", clearAll);
 
 //functions
 function addToDo(e){
     if(e.keyCode == "13"){
-        //create elements and append
+        if(input.value.trim()){
+                    //create elements and append
         let todoLI = document.createElement("li");
         let innerDiv = document.createElement("div");
         let todoCircle = document.createElement("a");
@@ -42,6 +45,7 @@ function addToDo(e){
         todoUL.append(todoLI);
 
         input.value = "";
+        }
 
     }
 }
@@ -59,5 +63,12 @@ function deleteAndComplete(e){
         // console.log("circle")
         let itemToDecorate = targetItem.nextElementSibling;
         itemToDecorate.classList.add("completed-content");
+        targetItem.classList.add("todo__complete");
     }
+}
+
+function clearAll(todoUL){
+
+    todoUL.innerHTML = "";
+
 }

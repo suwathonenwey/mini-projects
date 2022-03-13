@@ -62,6 +62,7 @@ body{
     height: 25px;
     border: 1px solid var(--light-grayish-blue);
     border-radius: 50%;
+    cursor: pointer;
 }
 .todo__input{
     border: none;
@@ -127,6 +128,44 @@ body{
 }
 .circle-active{
     background: linear-gradient(to bottom right, var(--check-first), var(--check-second));
+}
+.cancle{
+    display: none;
+    cursor: pointer;
+}
+.cancle img{
+    pointer-events: none;
+}
+.todo__item:hover .cancle{
+    display: block;
+}
+.completed-content{
+    text-decoration: line-through;
+    color: var(--dark-grayish-blue);
+}
+.todo__complete{
+    margin-right: 25px;
+    width: 25px;
+    height: 25px;
+    border: 1px solid var(--light-grayish-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.todo__complete::after{
+    content: url(images/icon-check.svg);
+    width: 25px;
+    background: linear-gradient(150deg, var(--check-first), var(--check-second));
+    padding: 5px;
+    border-radius: 50%;
+}
+.choices a:hover, .clear-completed:hover{
+    color: var(--very-dark-grayish-blue);
+}
+.choice-active{
+    color: var(--bright-blue);
 }
 @media screen and (max-width: 450px){
     .hero-image{

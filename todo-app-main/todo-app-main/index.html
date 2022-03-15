@@ -10,7 +10,6 @@
 
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="night-mode.css">
-  <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
@@ -52,7 +51,7 @@
       </div>
 
       <div class="todo__list">
-        <ul id="todo-container" class="todo__container">
+        <ul id="todo-ul" class="todo__container">
 
         </ul>
 
@@ -62,13 +61,13 @@
           items left
         </p>
         <div class="choices display-none-choice">
-          <a href="#" class="all" id="all">
+          <a href="#" class="choice all" id="all">
             <h4>All</h4>
           </a>
-          <a href="#" class="ac-text" id="ac-text">
+          <a href="#" class="choice ac-text" id="ac-text">
             <h4 class="activeText">Active</h4>
           </a>
-          <a href="#" class="completed" id="completed">
+          <a href="#" class="choice completed" id="completed">
             <h4 class="completed">Completed</h4>
           </a>
         </div>
@@ -99,7 +98,8 @@
   </div>
 
   <script src="jquery.min.js"></script>
-  <script src="todo.js"></script>
+  <!-- <script src="todo.js"></script> -->
+  <script src="app.js"></script>
 
 </body>
 </html>

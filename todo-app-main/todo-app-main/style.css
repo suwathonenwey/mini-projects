@@ -167,6 +167,14 @@ body{
 .choice-active{
     color: var(--bright-blue);
 }
+.choice h4{
+    pointer-events: none;
+}
+.no-text{
+    text-align: center;
+    padding: 15px 25px;
+    color: var(--dark-grayish-blue);
+}
 @media screen and (max-width: 450px){
     .hero-image{
         background: url(images/bg-mobile-light.jpg);

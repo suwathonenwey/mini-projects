@@ -121,6 +121,7 @@ input[type=number] {
     color: white;
     text-transform: uppercase;
     margin-top: auto;
+    transition: all 0.5s ease;
 }
 .custom-input{
     text-align: right;
@@ -141,7 +142,9 @@ input[type=number] {
 .custom-input:hover{
     background: var(--white);
 }
-
+.reset:hover{
+    background: hsla(172, 67%, 45%, 0.719);
+}
 /* placeholder color */
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: var(--dark-grayish-cyan);

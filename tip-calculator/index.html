@@ -46,17 +46,17 @@
           <p class="sub-heading">Bill</p>
           <div class="input-area">
             <img src="images/icon-dollar.svg" alt="">
-            <input type="number" class="input" id="input" placeholder="0" required>
+            <input type="number" class="input" id="bill-input" placeholder="0" required>
           </div>
         </div>
         <div class="each">
           <p class="sub-heading">Select Tip %</p>
-          <div class="grid">
-            <a href="#" class="grid-item">5%</a>
-            <a href="#" class="grid-item">10%</a>
-            <a href="#" class="grid-item">15%</a>
-            <a href="#" class="grid-item">25%</a>
-            <a href="#" class="grid-item">50%</a>
+          <div class="grid" id="grid">
+            <a href="#" class="grid-item" id="percent-tip" data-value="5">5%</a>
+            <a href="#" class="grid-item" id="percent-tip" data-value="10">10%</a>
+            <a href="#" class="grid-item" id="percent-tip" data-value="15">15%</a>
+            <a href="#" class="grid-item" id="percent-tip" data-value="25">25%</a>
+            <a href="#" class="grid-item" id="percent-tip" data-value="50">50%</a>
             <input type="number" class="custom-input grid-item" id="custom-input" placeholder="Custom">
           </div>
         </div>
@@ -64,7 +64,7 @@
           <p class="sub-heading">Number of People</p>
           <div class="input-area">
             <img src="images/icon-person.svg" alt="">
-            <input type="number" class="input" id="input" placeholder="0" required>
+            <input type="number" class="input" id="person-input" placeholder="1" min="1" value="1" required>
           </div>
         </div>
       </div>
@@ -72,11 +72,11 @@
       <div class="second-part">
         <div class="second-each">
           <h3 class="title">Tip Amount <span>/ person</span></h3>
-          <h1 class="tip">$0.00</h1>
+          <h1 class="tip"> <span>$</span>0.00</h1>
         </div>
         <div class="second-each">
           <h3 class="title">Total <span>/ person</span></h3>
-          <h1 class="total">$0.00</h1>
+          <h1 class="total"> <span>$</span>0.00</h1>
         </div>
         <a href="#" id="reset" class="reset">reset</a>
       </div>
@@ -88,5 +88,7 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
+
+  <script src="app.js"></script>
 </body>
 </html>

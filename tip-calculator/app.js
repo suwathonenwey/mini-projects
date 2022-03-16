@@ -44,9 +44,9 @@ function calculate(x){
     if(personInput.value == 0){
         zero.classList.add("zero");
         zero.querySelector(".zero-text").style.display = "block";
-        zero.nextSibling().style.display = "block";
     }
     else{
+
                         //get total tip
                         let totalTip = (toNumber(billInput.value) / 100) * x;
 
@@ -62,5 +62,13 @@ function calculate(x){
                         //put value into innerhtml
                         tipText.innerHTML = personPerTip.toFixed(2);
                         totalText.innerHTML = personPerTotal.toFixed(2);
+
+                        zero.classList.remove("zero");
+                        zero.querySelector(".zero-text").style.display = "none";
     }
+}
+
+function numberOnly(input){
+    var num = /[^0-9]/gi;
+    input.value = input.value.replace(num, '');
 }

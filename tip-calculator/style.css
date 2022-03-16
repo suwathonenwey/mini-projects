@@ -197,6 +197,9 @@ input[type=number] {
     .title{
         margin-bottom: 0;
     }
+    .second-each h1{
+        font-size: 2rem;
+    }
 }
 
 @media screen and (max-width: 480px){

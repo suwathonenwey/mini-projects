@@ -124,7 +124,7 @@ input[type=number] {
     padding: 15px;
     border-radius: 5px;
     text-decoration: none;
-    color: white;
+    color: var(--very-dark-cyan);
     text-transform: uppercase;
     margin-top: auto;
     transition: all 0.5s ease;
@@ -137,6 +137,7 @@ input[type=number] {
     background: var(--light-grayish-cyan);
     color: var(--very-dark-cyan);
     border: 2px solid transparent;
+    text-align: center;
 }
 .input-area:hover, .custom-input:hover{
     border: 2px solid var(--strong-cyan);
@@ -186,11 +187,33 @@ input[type=number] {
     border-color: orange;
 }
 
+@media screen and (max-width: 800px){
+    .main{
+        width: 90%;
+    }
+    .second-each{
+        flex-direction: column;
+    }
+    .title{
+        margin-bottom: 0;
+    }
+}
+
 @media screen and (max-width: 480px){
-    body{
-        display: block;
+    .logo{
+        margin-top: 50px;
+    }
+    .main{
+        width: 95%;
     }
     .content{
         flex-direction: column;
+    }
+    .grid{
+        grid-template-columns: repeat(2, 160px);
+    }
+    .second-part{
+        margin-left: 0;
+        margin-top: 30px;
     }
 }

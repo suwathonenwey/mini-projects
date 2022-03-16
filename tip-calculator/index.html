@@ -61,10 +61,12 @@
           </div>
         </div>
         <div class="">
-          <p class="sub-heading">Number of People</p>
-          <div class="input-area">
+          <p class="sub-heading" id="zero">Number of People
+            <span class="zero-text">Can't be zero</span>
+          </p>
+          <div class="input-area zero-input">
             <img src="images/icon-person.svg" alt="">
-            <input type="number" class="input" id="person-input" placeholder="1" min="1" value="1" required>
+            <input type="number" class="input" id="person-input" placeholder="0" required>
           </div>
         </div>
       </div>
@@ -72,11 +74,11 @@
       <div class="second-part">
         <div class="second-each">
           <h3 class="title">Tip Amount <span>/ person</span></h3>
-          <h1 class="tip"> <span>$</span>0.00</h1>
+          <h1> $ <span class="tip">0.00</span></h1>
         </div>
         <div class="second-each">
           <h3 class="title">Total <span>/ person</span></h3>
-          <h1 class="total"> <span>$</span>0.00</h1>
+          <h1 > $ <span class="total">0.00</span></h1>
         </div>
         <a href="#" id="reset" class="reset">reset</a>
       </div>

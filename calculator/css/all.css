@@ -1,4 +1,95 @@
 @import url("https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap");
+.theme-2 .header .logo {
+  color: #35352c;
+}
+
+.theme-2 .page {
+  background: #e6e6e6;
+}
+
+.theme-2 .screen {
+  background: #ededed;
+  color: #35352c;
+}
+
+.theme-2 .keypad {
+  background: #d1cccc;
+}
+
+.theme-2 .keypad .number, .theme-2 .keypad .symbol {
+  background: #e5e4e1;
+  border-bottom-color: #a69d91;
+}
+
+.theme-2 .keypad .del, .theme-2 .keypad .reset-btn {
+  background: #377f86;
+  border-bottom-color: #1b5f65;
+}
+
+.theme-2 .keypad .equal-btn {
+  background: #ca5502;
+  border-block-color: #893901;
+  color: white;
+}
+
+.theme-2 .theme-part span {
+  color: #35352c;
+}
+
+.theme-2 .theme-part .check {
+  background: #d1cccc;
+}
+
+.theme-2 .theme-part .check::before {
+  background: #ca5502;
+}
+
+.theme-3 .header .logo {
+  color: #ffe53d;
+}
+
+.theme-3 .page {
+  background: #160628;
+}
+
+.theme-3 .screen {
+  background: #1d0934;
+  color: #ffe53d;
+}
+
+.theme-3 .keypad {
+  background: #1d0934;
+}
+
+.theme-3 .keypad .number, .theme-3 .keypad .symbol {
+  background: #341c4f;
+  border-bottom-color: #871c9c;
+  color: #ffe53d;
+}
+
+.theme-3 .keypad .del, .theme-3 .keypad .reset-btn {
+  background: #58077d;
+  border-bottom-color: #bc15f4;
+}
+
+.theme-3 .keypad .equal-btn {
+  background: #00e0d1;
+  border-block-color: #6cf9f2;
+  color: #1b2428;
+}
+
+.theme-3 .theme-part span {
+  color: #ffe53d;
+}
+
+.theme-3 .theme-part .check {
+  background: #1d0934;
+}
+
+.theme-3 .theme-part .check::before {
+  background: #00e0d1;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +98,7 @@
           box-sizing: border-box;
 }
 
-body {
+.page {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -102,14 +193,95 @@ body {
   border-bottom: 3px solid #b4a597;
 }
 
-.keypad .del, .keypad .span-2 {
+.keypad .del, .keypad .reset-btn {
   background: #637097;
   color: white;
   border-bottom: 3px solid #404e72;
   font-size: 1.2rem;
 }
 
+.keypad .equal-btn {
+  background: #d03f2f;
+  border-bottom: 3px solid #93261a;
+}
+
 .keypad .span-2 {
   grid-column: span 2;
+}
+
+.theme-part {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.theme-part span {
+  text-transform: uppercase;
+  color: white;
+  font-size: 12px;
+}
+
+.theme-part .theme {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 25px;
+}
+
+.theme-part .theme-numbers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 80px;
+  margin-bottom: 8px;
+}
+
+.theme-part input[type="checkbox"] {
+  -webkit-appearance: none;
+  visibility: hidden;
+  display: none;
+}
+
+.theme-part .check {
+  display: block;
+  width: 80px;
+  height: 30px;
+  background: #232c43;
+  border-radius: 20px;
+  position: relative;
+}
+
+.theme-part .check::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #d03f2f;
+  top: 5px;
+  left: 5px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  cursor: pointer;
 }
 /*# sourceMappingURL=all.css.map */

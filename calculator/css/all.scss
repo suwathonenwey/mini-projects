@@ -3,6 +3,9 @@
 //variables
 @import './variables';
 
+//
+@import "./theme2";
+@import "./theme3";
 
 //mixins 
 @mixin flexCenter($justify, $direction) {
@@ -20,7 +23,7 @@
     box-sizing: border-box;
 }
 
-body{
+.page{
     @include flexCenter(center, row);
 
     min-height: 100vh;
@@ -57,6 +60,7 @@ body{
 }
 
 .keypad{
+
     background: $keypadBg;
     padding: 1.3rem;
     border-radius: $borderRadius;
@@ -78,14 +82,69 @@ body{
         border-bottom: 3px solid $numberShadow;
     }
 
-    .del, .span-2{
+    .del, .reset-btn{
         background: $keyBg;
         color: $white;
         border-bottom: 3px solid $keyShadow;
         font-size: 1.2rem;
     }
 
+    .equal-btn{
+        background: $toggleKey;
+        border-bottom: 3px solid $toggleKeyShadow;
+    }
+
     .span-2{
         grid-column: span 2;
     }
+}
+
+.theme-part{
+    @include flexCenter(space-around, row);
+
+    span{
+        text-transform: uppercase;
+        color: $white;
+        font-size: 12px;
+    }
+
+    .theme{
+        @include flexCenter(space-around, column);
+
+        margin-left: 25px;
+    }
+
+    .theme-numbers{
+        display: flex;
+        justify-content: space-around;
+        width: 80px;
+        margin-bottom: 8px;
+    }
+
+    input[type="checkbox"]{
+        -webkit-appearance: none;
+        visibility: hidden;
+        display: none;
+    }
+    .check{
+        display: block;
+        width: 80px;
+        height: 30px;
+        background: $keypadBg;
+        border-radius: 20px;
+        position: relative;
+    }
+    .check::before{
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: $toggleKey;
+        top: 5px;
+        left: 5px;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+
 }

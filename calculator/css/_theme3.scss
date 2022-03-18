@@ -1,0 +1,48 @@
+//for theme 3
+//for theme 2
+.theme-3{
+    .header .logo{
+        color: map-get($theme3, "text");
+    }
+    .page{
+        background: map-get($theme3, "mainBg");
+    }
+    .screen{
+        background: map-get($theme3, "screenBg");
+        color: map-get($theme3, "text");
+    }
+
+    .keypad{
+        background: map-get($theme3, "keyPadBg");
+
+        .number, .symbol{
+            background: map-get($theme3, "numberBg");
+            border-bottom-color: map-get($theme3, "numberShadow");
+            color: map-get($theme3, "text");
+        }
+        .del, .reset-btn{
+            background: map-get($theme3, "keyBg");
+            border-bottom-color: map-get($theme3, "keyShadow");
+        }
+        .equal-btn{
+            background: map-get($theme3, "toggleKey");
+            border-block-color: map-get($theme3, "toggleKeyShadow");
+            color: map-get($theme3, "darkText");
+        }
+    }
+
+    .theme-part{
+        span{
+            color: map-get($theme3, "text");
+        }
+
+
+        .check{
+            background: map-get($theme3, "keyPadBg");
+        }
+
+        .check::before{
+            background: map-get($theme3, "toggleKey");
+        }
+    }
+}

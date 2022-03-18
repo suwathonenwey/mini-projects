@@ -13,3 +13,42 @@ $white: hsl(0, 0, 100%);
 
 //utilities
 $borderRadius: 10px;
+
+//theme 2 colors
+$theme2: (
+    "mainBg": hsl(0, 0%, 90%),
+    "keyPadBg": hsl(0, 5%, 81%),
+    "screenBg": hsl(0, 0%, 93%),
+    "keyBg": hsl(185, 42%, 37%),
+    "keyShadow": hsl(185, 58%, 25%),
+    "toggleKey": hsl(25, 98%, 40%),
+    "toggleKeyShadow": hsl(25, 99%, 27%),
+    "numberBg": hsl(45, 7%, 89%),
+    "numberShadow": hsl(35, 11%, 61%),
+    "text": hsl(60, 10%, 19%),
+);
+
+//theme 3 colors
+$theme3: (
+    // "mainBg": hsl(268, 75%, 9%),
+    // "keyPadBg": hsl(268, 71%, 12%),
+    // "screenBg": hsl(268, 71%, 12%),
+    // "keyBg": hsl(281, 89%, 26%),
+    // "keyShadow": hsl(285, 91%, 52%),
+    // "toggleKey": hsl(176, 100%, 44%),
+    // "toggleKeyShadow": hsl(177, 92%, 70%),
+    // "numberBg": hsl(52, 100%, 62%),
+    // "numberShadow": hsl(35, 11%, 61%),
+    // "text": hsl(60, 10%, 19%),
+    "mainBg": hsl(268, 75%, 9%),
+    "screenBg": hsl(268, 71%, 12%),
+    "keyPadBg": hsl(268, 71%, 12%),
+    "keyBg": hsl(281, 89%, 26%),
+    "keyShadow": hsl(285, 91%, 52%),
+    "toggleKey": hsl(176, 100%, 44%),
+    "toggleKeyShadow": hsl(177, 92%, 70%),
+    "text": hsl(52, 100%, 62%),
+    "darkText": hsl(198, 20%, 13%),
+    "numberBg": hsl(268, 47%, 21%),
+    "numberShadow": hsl(290, 70%, 36%),
+);

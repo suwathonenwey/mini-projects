@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
+
+//variables
+@import './variables';
+
+
+//mixins 
+@mixin flexCenter($justify, $direction) {
+    display: flex;
+    align-items: center;
+    justify-content: $justify;
+    flex-direction: $direction;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Spartan', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    @include flexCenter(center, row);
+
+    min-height: 100vh;
+    background: $mainBg;
+}
+
+.main{
+    min-width: 500px;
+}
+.header{
+    @include flexCenter(space-between, row);
+
+    margin-bottom: 30px;
+
+    .logo{
+        color: $white;
+        font-size: 2rem;
+    }
+}
+
+.screen{
+    @include flexCenter(flex-end, row);
+
+    background: $screenBg;
+    color: $white;
+    height: 100px;
+    padding: 1.3rem;
+    border-radius: $borderRadius;
+    margin: 20px 0;
+
+    .result{
+        font-size: 2rem;
+    }
+}
+
+.keypad{
+    background: $keypadBg;
+    padding: 1.3rem;
+    border-radius: $borderRadius;
+    display: grid;
+    grid-template-columns: repeat(4, 110px);
+    gap: 20px;
+
+    button{
+        border: none;
+        padding: 1rem;
+        border-radius: $borderRadius;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    .number, .symbol{
+        background: $numberBg;
+        color: $text;
+        border-bottom: 3px solid $numberShadow;
+    }
+
+    .del, .span-2{
+        background: $keyBg;
+        color: $white;
+        border-bottom: 3px solid $keyShadow;
+        font-size: 1.2rem;
+    }
+
+    .span-2{
+        grid-column: span 2;
+    }
+}

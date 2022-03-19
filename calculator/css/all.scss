@@ -97,6 +97,16 @@
     .span-2{
         grid-column: span 2;
     }
+
+    // .number:hover, .symbol:hover{
+    //     background: mix(black, $numberBg, 10%);
+    // }
+    // .del:hover, .reset-btn:hover{
+    //     background: mix(black, $keyBg, 10%);
+    // }
+    // .equal-btn:hover{
+    //     background: mix(black, $toggleKey, 10%);
+    // }
 }
 
 .theme-part{
@@ -120,6 +130,9 @@
         width: 80px;
         margin-bottom: 8px;
         cursor: pointer;
+    }
+    .theme-number{
+        user-select: none;
     }
 
     input[type="checkbox"]{
@@ -146,7 +159,6 @@
         transition: 0.5s;
         cursor: pointer;
     }
-
 }
 
 @media screen and (max-width: 480px){

@@ -257,6 +257,13 @@
   cursor: pointer;
 }
 
+.theme-part .theme-number {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
 .theme-part input[type="checkbox"] {
   -webkit-appearance: none;
   visibility: hidden;

@@ -47,28 +47,28 @@
 
       <div class="keypad">
 
-        <button class="buttons number">7</button>
-        <button class="buttons number">8</button>
-        <button class="buttons number">9</button>
-        <button class="buttons del">DEL</button>
+        <button class="buttons number" onclick="showDisplay(7)">7</button>
+        <button class="buttons number" onclick="showDisplay(8)">8</button>
+        <button class="buttons number" onclick="showDisplay(9)">9</button>
+        <button class="buttons del" onclick="clearEach()">DEL</button>
 
-        <button class="buttons number">4</button>
-        <button class="buttons number">5</button>
-        <button class="buttons number">6</button>
-        <button class="buttons plus symbol">&#43;</button>
+        <button class="buttons number" onclick="showDisplay(4)">4</button>
+        <button class="buttons number" onclick="showDisplay(5)">5</button>
+        <button class="buttons number" onclick="showDisplay(6)">6</button>
+        <button class="buttons plus symbol" onclick="showDisplay('+')">&#43;</button>
 
-        <button class="buttons number">1</button>
-        <button class="buttons number">2</button>
-        <button class="buttons number">3</button>
-        <button class="buttons minus symbol">&#8722;</button>
+        <button class="buttons number" onclick="showDisplay(1)">1</button>
+        <button class="buttons number" onclick="showDisplay(2)">2</button>
+        <button class="buttons number" onclick="showDisplay(3)">3</button>
+        <button class="buttons minus symbol" onclick="showDisplay('-')">&#8722;</button>
 
-        <button class="buttons decimal symbol">.</button>
-        <button class="buttons number">0</button>
-        <button class="buttons divide symbol">&#247;</button>
-        <button class="buttons multiply symbol">&#215;</button>
+        <button class="buttons decimal symbol" onclick="showDisplay('.')">.</button>
+        <button class="buttons number" onclick="showDisplay(0)">0</button>
+        <button class="buttons divide symbol" onclick="showDisplay('/')">&#247;</button>
+        <button class="buttons multiply symbol" onclick="showDisplay('*')">&#215;</button>
 
-        <button class="buttons span-2 reset-btn">RESET</button>
-        <button class="buttons span-2 equal-btn">&#61;</button>
+        <button class="buttons span-2 reset-btn" onclick="clearAll()">RESET</button>
+        <button class="buttons span-2 equal-btn" onclick="calculate()">&#61;</button>
 
 
       </div>

@@ -79,19 +79,19 @@
     .number, .symbol{
         background: $numberBg;
         color: $text;
-        border-bottom: 3px solid $numberShadow;
+        border-bottom: 4px solid $numberShadow;
     }
 
     .del, .reset-btn{
         background: $keyBg;
         color: $white;
-        border-bottom: 3px solid $keyShadow;
+        border-bottom: 4px solid $keyShadow;
         font-size: 1.2rem;
     }
 
     .equal-btn{
         background: $toggleKey;
-        border-bottom: 3px solid $toggleKeyShadow;
+        border-bottom: 4px solid $toggleKeyShadow;
     }
 
     .span-2{
@@ -119,6 +119,7 @@
         justify-content: space-around;
         width: 80px;
         margin-bottom: 8px;
+        cursor: pointer;
     }
 
     input[type="checkbox"]{
@@ -134,8 +135,7 @@
         border-radius: 20px;
         position: relative;
     }
-    .check::before{
-        content: '';
+    .check-mark{
         position: absolute;
         width: 20px;
         height: 20px;

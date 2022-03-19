@@ -190,19 +190,19 @@
 .keypad .number, .keypad .symbol {
   background: #eae3dc;
   color: #444b5a;
-  border-bottom: 3px solid #b4a597;
+  border-bottom: 4px solid #b4a597;
 }
 
 .keypad .del, .keypad .reset-btn {
   background: #637097;
   color: white;
-  border-bottom: 3px solid #404e72;
+  border-bottom: 4px solid #404e72;
   font-size: 1.2rem;
 }
 
 .keypad .equal-btn {
   background: #d03f2f;
-  border-bottom: 3px solid #93261a;
+  border-bottom: 4px solid #93261a;
 }
 
 .keypad .span-2 {
@@ -254,6 +254,7 @@
       justify-content: space-around;
   width: 80px;
   margin-bottom: 8px;
+  cursor: pointer;
 }
 
 .theme-part input[type="checkbox"] {
@@ -271,8 +272,7 @@
   position: relative;
 }
 
-.theme-part .check::before {
-  content: '';
+.theme-part .check-mark {
   position: absolute;
   width: 20px;
   height: 20px;

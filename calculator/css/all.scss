@@ -148,3 +148,13 @@
     }
 
 }
+
+@media screen and (max-width: 480px){
+    .main{
+        max-width: 90%;
+        min-width: 80%;
+    }
+    .keypad{
+        grid-template-columns: repeat(4, 68px);
+    }
+}

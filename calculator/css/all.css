@@ -284,4 +284,15 @@
   transition: 0.5s;
   cursor: pointer;
 }
+
+@media screen and (max-width: 480px) {
+  .main {
+    max-width: 90%;
+    min-width: 80%;
+  }
+  .keypad {
+    -ms-grid-columns: (68px)[4];
+        grid-template-columns: repeat(4, 68px);
+  }
+}
 /*# sourceMappingURL=all.css.map */

@@ -15,7 +15,6 @@
     flex-direction: $direction;
 }
 
-
 *{
     margin: 0;
     padding: 0;
@@ -74,6 +73,7 @@
         border-radius: $borderRadius;
         font-size: 1.5rem;
         cursor: pointer;
+        user-select: none;
     }
 
     .number, .symbol{
@@ -92,6 +92,7 @@
     .equal-btn{
         background: $toggleKey;
         border-bottom: 4px solid $toggleKeyShadow;
+        color: $white;
     }
 
     .span-2{
@@ -161,12 +162,20 @@
     }
 }
 
-@media screen and (max-width: 480px){
+@media screen and (max-width: 500px){
     .main{
         max-width: 90%;
         min-width: 80%;
+        margin-top: 30px;
     }
     .keypad{
-        grid-template-columns: repeat(4, 68px);
+        grid-template-columns: repeat(4, minmax(50px, 1fr));
+
+
+        .del, .reset-btn, .equal-btn{
+            font-size: 15px;
+            padding: 0.5rem;
+        }
     }
+
 }

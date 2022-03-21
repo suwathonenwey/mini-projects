@@ -185,6 +185,10 @@
   border-radius: 10px;
   font-size: 1.5rem;
   cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .keypad .number, .keypad .symbol {
@@ -203,6 +207,7 @@
 .keypad .equal-btn {
   background: #d03f2f;
   border-bottom: 4px solid #93261a;
+  color: white;
 }
 
 .keypad .span-2 {
@@ -292,14 +297,19 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 500px) {
   .main {
     max-width: 90%;
     min-width: 80%;
+    margin-top: 30px;
   }
   .keypad {
-    -ms-grid-columns: (68px)[4];
-        grid-template-columns: repeat(4, 68px);
+    -ms-grid-columns: (minmax(50px, 1fr))[4];
+        grid-template-columns: repeat(4, minmax(50px, 1fr));
+  }
+  .keypad .del, .keypad .reset-btn, .keypad .equal-btn {
+    font-size: 15px;
+    padding: 0.5rem;
   }
 }
 /*# sourceMappingURL=all.css.map */

@@ -28,7 +28,9 @@ $bodysecondgradient: hsl(237, 23%, 32%);
     font-family: 'Overpass', sans-serif;
     font-family: 'Ubuntu', sans-serif;
 }
-
+body{
+    overflow-x: hidden;
+}
 .intro{
     background: url(../images/bg-pattern-intro-desktop.svg), linear-gradient(to right, $firstgradient, $secondgradient);
     min-height: 80vh;
@@ -108,7 +110,7 @@ $bodysecondgradient: hsl(237, 23%, 32%);
 
 .design-part{
     background: url(../images/illustration-editor-desktop.svg);
-    min-height: 90vh;
+    min-height: 100vh;
     background-repeat: no-repeat;
     background-position-x: 1200px;
     margin-top: 5rem;
@@ -126,7 +128,7 @@ $bodysecondgradient: hsl(237, 23%, 32%);
         font-family: 'Overpass', sans-serif;
     }
     .design-content{
-        width: 500px;
+        width: 700px;
         margin-left: 10rem;
         padding: 5rem 0;
     }
@@ -140,8 +142,112 @@ $bodysecondgradient: hsl(237, 23%, 32%);
             margin-bottom: 20px;
         }
         .content-para{
+            font-family: 'Overpass', sans-serif;
             color: $bodycopy;
             line-height: 1.8rem;
+            font-size: 20px;
         }
+    }
+}
+.phone-part{
+    width: 100vw;
+    height: 40vh;
+    background: url(../images/bg-pattern-circles.svg), linear-gradient(to right, $bodyfirstgradient, $bodysecondgradient);
+    background-repeat: no-repeat;
+    // background-position-x: -100px;
+    background-position-y: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-top-right-radius: 5rem;
+    border-bottom-left-radius: 5rem;
+
+    .phone-content{
+        width:550px;
+        .title, .para{
+            font-family: 'Overpass';
+        }
+
+        .title{
+            font-size: 2.2rem;
+            color: $white;
+            font-weight: 600;
+        }
+        .para{
+            color: $footer;
+            line-height: 1.8rem;
+            margin-top: 30px;
+            font-size: 20px;
+        }
+    }
+}
+
+.laptop-part{
+    background: url(../images/illustration-laptop-desktop.svg);
+    min-height: 90vh;
+    background-repeat: no-repeat;
+    background-position-x: -200px;
+    margin-top: 6rem;
+    // background-size: cover;
+    display: flex;
+    justify-content: center;
+    padding-left: 500px;
+    padding-top: 6rem;
+
+    .heading{
+        text-align: center;
+        font-size: 2.2rem;
+        font-weight: 600;
+        padding: 60px 0;
+    }
+
+    .h-color{
+        color: $heading;
+        font-family: 'Overpass', sans-serif;
+    }
+    .laptop-content{
+        width: 700px;
+        margin-left: 10rem;
+        padding: 5rem 0;
+    }
+
+    .sub-content{
+        margin-bottom: 50px;
+
+        .content-h{
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        .content-para{
+            font-family: 'Overpass', sans-serif;
+            color: $bodycopy;
+            line-height: 1.8rem;
+            font-size: 20px;
+        }
+    }
+}
+.contact-part{
+    background: $footerbg;
+    border-top-right-radius: 5rem;
+    padding: 4rem 10rem 4rem 0;
+    display: flex;
+    justify-content: space-around;
+
+    .title{
+        color: $white;
+        font-weight: bold;
+    }
+
+    ul{
+        list-style: none;
+        margin-top: 30px;
+    }
+    ul li{
+        margin-bottom: 15px;
+    }
+    ul li a{
+        color: $footer;
+        text-decoration: none;
     }
 }

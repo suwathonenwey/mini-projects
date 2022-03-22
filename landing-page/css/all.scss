@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap');
+
+//colors
+$lightred: hsl(356, 100%, 66%);
+$verylightred: hsl(355, 100%, 74%);
+$heading: hsl(208, 49%, 24%);
+$white: hsl(0, 0%, 100%);
+$footer: hsl(240, 2%, 79%);
+$bodycopy: hsl(207, 13%, 34%);
+$footerbg: hsl(240, 10%, 16%);
+$firstgradient: hsl(13, 100%, 72%);
+$secondgradient: hsl(353, 100%, 62%);
+$bodyfirstgradient: hsl(237, 17%, 21%);
+$bodysecondgradient: hsl(237, 23%, 32%);
+
+//mixins
+@mixin flexCenter($justifycontent, $direction) {
+    display: flex;
+    align-items: center;
+    justify-content: $justifycontent;
+    flex-direction: $direction;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Overpass', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.intro{
+    background: url(../images/bg-pattern-intro-desktop.svg), linear-gradient(to right, $firstgradient, $secondgradient);
+    min-height: 80vh;
+    border-bottom-left-radius: 5rem;
+    border-bottom-right-radius: 5rem;
+    background-size: 150%;
+    background-position: center;
+    position: relative;
+}
+.navbar{
+    @include flexCenter(space-between, row);
+    padding: 3rem 10rem 0 10rem;
+
+    .logo{
+        margin-right: 30px;
+    }
+
+    ul{
+        list-style-type: none;
+
+        li{
+            display: inline-block;
+            margin-left: 25px;
+        }
+
+        li a{
+            text-decoration: none;
+            font-weight: 500;
+            color: $white;
+        }
+    }
+
+    .nav-btns{
+        flex: 1;
+        text-align: right;
+    }
+}
+
+.button{
+    border: none;
+    padding: 1rem 3rem;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.white-btn{
+    background: $white;
+    color: $lightred;
+}
+.nobackground-btn{
+    background: none;
+    color: $white;
+}
+.content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: $white;
+
+    .title{
+        font-size: 4rem;
+    }
+    .para{
+        font-size: 18px;
+        margin: 30px 0 50px 0;
+    }
+    .learn-btn{
+        background: none;
+        border: 1px solid $white;
+        color: $white;
+        margin-left: 30px;
+    }
+}
+
+.design-part{
+    background: url(../images/illustration-editor-desktop.svg);
+    min-height: 90vh;
+    background-repeat: no-repeat;
+    background-position-x: 1200px;
+    margin-top: 5rem;
+    // background-size: cover;
+
+    .heading{
+        text-align: center;
+        font-size: 2.2rem;
+        font-weight: 600;
+        padding: 60px 0;
+    }
+
+    .h-color{
+        color: $heading;
+        font-family: 'Overpass', sans-serif;
+    }
+    .design-content{
+        width: 500px;
+        margin-left: 10rem;
+        padding: 5rem 0;
+    }
+
+    .sub-content{
+        margin-bottom: 50px;
+
+        .content-h{
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        .content-para{
+            color: $bodycopy;
+            line-height: 1.8rem;
+        }
+    }
+}

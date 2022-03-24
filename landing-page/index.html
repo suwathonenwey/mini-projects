@@ -14,6 +14,28 @@
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
+
+    /* width */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px grey; 
+      border-radius: 10px;
+    }
+    
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: hsl(207, 13%, 34%); 
+      border-radius: 10px;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: hsl(207, 13%, 34%); 
+    }
   </style>
 </head>
 <body>
@@ -98,30 +120,90 @@
     <div class="navbar">
 
       <div class="logo"><img src="images/logo.svg" alt=""></div>
+      <img src="images/icon-hamburger.svg" class="menu-icon" alt="">
+      <img src="images/icon-close.svg" class="close-btn" style="display: none;" alt="">
 
-      <ul>
-        <li>
-          <a href="#">
-            Product <img src="images/icon-arrow-light.svg" alt="">
-        </a>
-      </li>
-        <li>
-          <a href="#">
-            Company <img src="images/icon-arrow-light.svg" alt="">
-        </a>
-      </li>
-        <li>
-          <a href="#">
-            Connect <img src="images/icon-arrow-light.svg" alt="">
-        </a>
-      </li>
-      </ul>
-
-      <div class="nav-btns">
-        <button class="button nobackground-btn" id="login-btn">Login</button>
-        <button class="button white-btn" id="signup-btn">Sign Up</button>
+      <div class="no-mobile">
+        <ul>
+          <li class="arrow" id="product">
+            <a href="#">
+              Product
+          </a>
+          <img src="images/icon-arrow-light.svg" class="arrow-img" alt="">
+        </li>
+        <div class="detail product-detail">
+          <a href="#">Overview</a>
+          <a href="#">Pricing</a>
+          <a href="#">Marketplace</a>
+          <a href="#">Features</a>
+          <a href="#">Integrations</a>
+        </div>
+          <li class="arrow" id="company">
+            <a href="#">
+              Company
+          </a>
+          <img src="images/icon-arrow-light.svg" class="arrow-img" alt="">
+        </li>
+        <div class="detail company-detail">
+          <a href="#">About</a>
+          <a href="#">Team</a>
+          <a href="#">Blog</a>
+          <a href="#">Carrers</a>
+        </div>
+          <li class="arrow" id="connect">
+            <a href="#">
+              Connect
+          </a>
+          <img src="images/icon-arrow-light.svg" class="arrow-img" alt="">
+        </li>
+        <div class="detail connect-detail">
+          <a href="#">Contact</a>
+          <a href="#">Newsletter</a>
+          <a href="#">LinkedIn</a>
+        </div>
+        </ul>
+  
+        <div class="nav-btns">
+          <button class="button nobackground-btn" id="login-btn">Login</button>
+          <button class="button white-btn" id="signup-btn">Sign Up</button>
+        </div>
       </div>
-    </div>
+
+      <div class="menu-slide">
+        <div class="accordion">
+          <p class="title">Product <img src="images/icon-arrow-dark.svg" alt=""></p>
+          <ul class="list">
+            <li>Overview</li>
+            <li>Pricing</li>
+            <li>Marketplace</li>
+            <li>Features</li>
+            <li>Integrations</li>
+          </ul>
+        </div>
+        <div class="accordion">
+          <p class="title">Company <img src="images/icon-arrow-dark.svg" alt=""></p>
+          <ul class="list">
+            <li>About</li>
+            <li>Team</li>
+            <li>Blog</li>
+            <li>Carrers</li>
+          </ul>
+        </div>
+        <div class="accordion last-accordion">
+          <p class="title">Connect <img src="images/icon-arrow-dark.svg" alt=""></p>
+          <ul class="list">
+            <li>Contact</li>
+            <li>Newsletter</li>
+            <li>LinkedIn</li>
+          </ul>
+        </div>
+
+        <div class="nav-btns">
+          <button class="button mobile-login" id="login-btn">Login</button>
+          <button class="button mobile-sign-up" id="signup-btn">Sign Up</button>
+        </div>
+      </div>
+      </div>
 
     <div class="content">
       <p class="title">A modern publishing platform</p>
@@ -136,16 +218,21 @@
 
   <section id="design" class="design-part">
     <p class="heading h-color">Designed for the future</p>
-    <div class="design-content">
-      <div class="sub-content">
-        <p class="content-h h-color">Introducing an extensible editor</p>
-        <p class="content-para">Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or change the looks of a blog.</p>
+    <div class="design-flex">
+      <div class="design-content">
+        <div class="sub-content">
+          <p class="content-h h-color">Introducing an extensible editor</p>
+          <p class="content-para">Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or change the looks of a blog.</p>
+        </div>
+        <div class="sub-content">
+          <p class="content-h h-color">Robust content management</p>
+          <p class="content-para">Flexible content management enables users to easily move through
+            posts. Increase the usability of your blog by adding customized categories, sections, format, or flow. With this functionality, you're in full control.
+          </p>
+        </div>
       </div>
-      <div class="sub-content">
-        <p class="content-h h-color">Robust content management</p>
-        <p class="content-para">Flexible content management enables users to easily move through
-          posts. Increase the usability of your blog by adding customized categories, sections, format, or flow. With this functionality, you're in full control.
-        </p>
+      <div class="design-img">
+        <img src="images/illustration-editor-desktop.svg" alt="">
       </div>
     </div>
   </section>
@@ -164,6 +251,10 @@
   </section>
 
   <section id="laptop" class="laptop-part">
+    <div class="laptop-img">
+    <img src="images/illustration-laptop-desktop.svg" class="laptop-img" alt="">
+
+    </div>
     <div class="laptop-content">
       <div class="sub-content">
         <p class="content-h h-color">Free, open, simple</p>
@@ -218,5 +309,7 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div> -->
+
+  <script src="page.js"></script>
 </body>
 </html>

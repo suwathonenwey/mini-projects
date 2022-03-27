@@ -16,6 +16,7 @@ $borderRadius: 10px;
 }
 body{
     background: rgb(245, 245, 245);
+    position: relative;
 }
 .hero{
     background: linear-gradient(to top, transparent, rgba(0,0,0,0.3)), url(../images/image-hero-desktop.jpg);
@@ -94,6 +95,7 @@ body{
                 border: none;
                 outline: none;
                 font-size: 1.1rem;
+                cursor: pointer;
             }
             .bookmark{
                 display: flex;
@@ -156,6 +158,7 @@ body{
     border: none;
     outline: none;
     font-size: 1.05rem;
+    cursor: pointer;
 }
 .about-card{
     .about-section{
@@ -172,7 +175,7 @@ body{
         }
 
         .product-card{
-            border: 1px solid #eee;
+            border: 1px solid rgb(209, 209, 209);
             border-radius: $borderRadius;
             padding: 30px;
             margin-bottom: 25px;
@@ -226,3 +229,83 @@ body{
         }
     }
 }
+//modal box section
+.modal-section{
+    background: rgba(0,0,0,0.4);
+    width: 100%;
+    position: fixed;
+    min-height: 100vh;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    padding-top: 150px;
+    transition: 0.5s;
+    z-index: 10;
+
+    .modal-box{
+        min-height: 50vh;
+        width: 700px;
+        background: white;
+        border-radius: $borderRadius;
+        padding: 30px;
+        display: none;
+        
+        .modal-title-box{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            h3{
+                font-size: 22px;
+            }
+            .close-btn{
+                cursor: pointer;
+            }
+        }
+        .modal-des{
+            font-size: 18px;
+            color: $darkGray;
+            margin: 25px 0;
+        }
+        .modal-card{
+            border: 1px solid rgb(209, 209, 209);
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 25px;
+
+            .circle{
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                border: 1px solid rgb(209, 209, 209);
+                margin-right: 30px;
+            }
+            .card-content{
+                width: 600px;
+                h4{
+                    font-size: 19px;
+                }
+                p{
+                    font-size: 18px;
+                    color: $darkGray;
+                    margin-top: 25px;
+                }
+            }
+        }
+        .no-reward-card{
+            display: flex;
+        }
+        // .modal-product{
+            
+        // }
+    }
+}
+// .modal-section.active{
+//     width: 100%;
+//     transform: scale(1);
+//     transform-origin: left;
+
+//     .modal-box{
+//         display: block;
+//     }
+// }

@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap');
+
+//colors
+$primary : hsl(176, 50%, 47%);
+$secondary : hsl(176, 72%, 28%);
+$black : hsl(0, 0%, 0%);
+$darkGray : hsl(0, 0%, 48%);
+$white : hsl(100, 100%, 100%);
+
+$borderRadius: 10px;
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Commissioner', sans-serif;
+}
+body{
+    background: rgb(245, 245, 245);
+}
+.hero{
+    background: linear-gradient(to top, transparent, rgba(0,0,0,0.3)), url(../images/image-hero-desktop.jpg);
+    height: 40vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 30px 9%;
+
+    .navbar{
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        img{
+            width: 150px;
+            cursor: pointer;
+        }
+
+        nav ul{
+            list-style: none;
+    
+            li{
+                display: inline-block;
+                margin-right: 30px;
+    
+                a{
+                    text-decoration: none;
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+.all-cards{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -60px;
+
+    .card{
+        width: 700px;
+        border-radius: $borderRadius;
+        padding: 20px;
+        background: white;
+        margin-bottom: 30px;
+    }
+
+    .intro-card{
+        padding-top: 0;
+        text-align: center;
+
+        .intro-logo{
+            margin-top: -30px;
+        }
+        .title{
+            font-size: 2em;
+            margin: 20px 0 15px 0;
+        }
+        .des{
+            color: $darkGray;
+            font-size: 18px;
+        }
+        .buttons{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 85%;
+            margin: 35px auto 10px auto;
+
+            
+            button{
+                border: none;
+                outline: none;
+                font-size: 1.1rem;
+            }
+            .bookmark{
+                display: flex;
+                align-items: center;
+                border-radius: 30px;
+                p{
+                    padding: 15px;
+                    color: $darkGray;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+    .count-card{
+
+        .count-section{
+            display: flex;
+            align-items: center;
+            margin: 20px;
+
+            .counts{
+                margin-right: 50px;
+                h1{
+                    font-size: 2rem;
+                }
+                p{
+                    color: $darkGray;
+                    margin-top: 10px;
+                    font-size: 18px;
+                }
+            }
+
+            .second{
+                border-left: 1px solid rgb(212, 212, 212);
+                border-right: 1px solid rgb(212, 212, 212);
+                padding: 0 50px;
+            }
+        }
+
+        .progress-bar{
+            background: #eee;
+            border-radius: 10px;
+            margin: 20px;
+
+            .bar{
+                width: 70%;
+                background: $primary;
+                height: 15px;
+                border-radius: $borderRadius;
+            }
+        }
+    }
+}
+.cyan-button{
+    padding: 15px 25px;
+    background: $primary;
+    border-radius: 25px;
+    color: $white;
+    font-weight: 700;
+    border: none;
+    outline: none;
+    font-size: 1.05rem;
+}
+.about-card{
+    .about-section{
+        margin: 20px;
+
+        .about-title{
+            margin-bottom: 30px;
+        }
+        .about-des{
+            color: $darkGray;
+            line-height: 1.7rem;
+            margin-bottom: 25px;
+            font-size: 18px;
+        }
+
+        .product-card{
+            border: 1px solid #eee;
+            border-radius: $borderRadius;
+            padding: 30px;
+            margin-bottom: 25px;
+
+            .product-title{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: 15px 0 25px 0;
+                span{
+                    font-weight: 500;
+                    color: $primary;
+                }
+            }
+
+            .product-des{
+                color: $darkGray;
+                line-height: 1.7rem;
+                font-size: 18px;
+            }
+
+            .details{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-top: 20px;
+                .left span{
+                    font-weight: 400;
+                    font-size: 18px;
+                    color: $darkGray;
+                }
+            }
+        }
+        .out-of-stock-card{
+            border: 1px solid #eeeeee90;
+            .product-title{
+                color: $darkGray;
+                span{
+                    color: hsla(176, 50%, 47%, 0.582);
+                }
+            }
+            .product-des{
+                color: hsla(0, 0%, 48%, 0.788);
+            }
+            .left{
+                color: $darkGray;
+            }
+            .cyan-button{
+                background-color: hsla(0, 0%, 48%, 0.308);
+            }
+        }
+    }
+}

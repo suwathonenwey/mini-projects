@@ -8,6 +8,28 @@ $darkGray : hsl(0, 0%, 48%);
 $white : hsl(100, 100%, 100%);
 
 $borderRadius: 10px;
+//for custom scrollbar
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: $darkGray; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: $darkGray; 
+  }
 
 *{
     margin: 0;
@@ -17,6 +39,53 @@ $borderRadius: 10px;
 body{
     background: rgb(245, 245, 245);
     position: relative;
+}
+hr{
+    background-color: rgb(209, 209, 209);
+    height: 1px;
+    border: none;
+}
+.menu-icon{
+    display: none;
+}
+.count-mobile{
+    display: none;
+}
+.out-of-stock-card{
+    border: 1px solid #eeeeee90;
+    .product-title{
+        color: $darkGray;
+        span{
+            color: hsla(176, 50%, 47%, 0.582);
+        }
+    }
+    .product-des{
+        color: hsla(0, 0%, 48%, 0.788);
+    }
+    .left{
+        color: $darkGray;
+    }
+    .cyan-button{
+        background-color: hsla(0, 0%, 48%, 0.308);
+    }
+}
+.out-of-stock-accordion{
+    padding: 20px;
+    display: flex;
+
+    .card-content{
+        width: 600px;
+    }
+    .product-des{
+        margin-top: 25px;
+    }
+}
+.circle{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid rgb(209, 209, 209);
+    margin-right: 30px;
 }
 .hero{
     background: linear-gradient(to top, transparent, rgba(0,0,0,0.3)), url(../images/image-hero-desktop.jpg);
@@ -209,24 +278,6 @@ body{
                 }
             }
         }
-        .out-of-stock-card{
-            border: 1px solid #eeeeee90;
-            .product-title{
-                color: $darkGray;
-                span{
-                    color: hsla(176, 50%, 47%, 0.582);
-                }
-            }
-            .product-des{
-                color: hsla(0, 0%, 48%, 0.788);
-            }
-            .left{
-                color: $darkGray;
-            }
-            .cyan-button{
-                background-color: hsla(0, 0%, 48%, 0.308);
-            }
-        }
     }
 }
 //modal box section
@@ -244,13 +295,14 @@ body{
     z-index: 10;
 
     .modal-box{
-        min-height: 50vh;
+        height: 65vh;
+        overflow: auto;
         width: 700px;
         background: white;
         border-radius: $borderRadius;
         padding: 30px;
         display: none;
-        
+
         .modal-title-box{
             display: flex;
             align-items: center;
@@ -268,18 +320,15 @@ body{
             margin: 25px 0;
         }
         .modal-card{
-            border: 1px solid rgb(209, 209, 209);
             border-radius: 5px;
             padding: 20px;
             margin-bottom: 25px;
+            cursor: pointer;
 
-            .circle{
-                width: 25px;
-                height: 25px;
-                border-radius: 50%;
-                border: 1px solid rgb(209, 209, 209);
-                margin-right: 30px;
+            .color-title:hover{
+                color: $primary;
             }
+
             .card-content{
                 width: 600px;
                 h4{
@@ -294,18 +343,250 @@ body{
         }
         .no-reward-card{
             display: flex;
+            border: 1px solid rgb(209, 209, 209);
         }
-        // .modal-product{
-            
-        // }
+        .product-card-accordion{
+            border: 1px solid rgb(209, 209, 209);
+            border-radius: $borderRadius;
+            margin-bottom: 25px;
+
+            .modal-product{
+                margin-bottom: 0;
+
+                .product-card-content{
+                    display: flex;
+                }
+                .card-content-title{
+                    display: flex;
+                    justify-content: space-between;
+    
+                    .span{
+                        flex: 1;
+                        text-align: left;
+                        margin-left: 20px;
+                        color: $primary;
+                        font-weight: 500;
+                    }
+                    .count span{
+                        font-weight: 400;
+                        color: $darkGray;
+                    }
+                }
+            }
+            .card-details-box{
+                padding: 0;
+                height: 0;
+                display: flex;
+                justify-content: space-between;
+                overflow: hidden;
+                transition: 0.3s;
+
+                p{
+                    color: $darkGray;
+                }
+                button{
+                    border: none;
+                    outline: none;
+                    padding: 10px 12px;
+                    cursor: pointer;
+                }
+                .amount{
+                    padding: 10px 20px;
+                    border-radius: 20px;
+                    background: none;
+                    color: $darkGray;
+                    border: 1px solid rgb(209, 209, 209);
+                    margin-right: 20px;
+                    span{
+                        font-weight: 500;
+                        color: $black;
+                        border-right: 1px solid $darkGray;
+                        padding-right: 3px;
+                    }
+                }
+                .amount:hover{
+                    border-color: $primary !important;
+                    span{
+                        border-right-color: $primary;
+                    }
+                }
+                .continue{
+                    color: $white;
+                    background: $primary;
+                    border-radius: 20px;
+                }
+                .continue:hover{
+                    background: $secondary;
+                }
+            }
+        }
+    }
+
+    //success-modal-box
+    .success-modal-box{
+        margin-top: 100px;
+        width: 500px;
+        height: 280px;
+        background: white;
+        border-radius: 15px;
+        padding: 30px 20px;
+        text-align: center;
+        display: none;
+
+        h3{
+            margin: 25px;
+        }
+        p{
+            color: $darkGray;
+            margin-bottom: 25px;
+        }
+
+        .got-btn{
+            padding: 15px 25px;
+            background: $primary;
+            border-radius: 25px;
+            color: $white;
+            font-weight: 700;
+            border: none;
+            outline: none;
+            font-size: 1.05rem;
+            cursor: pointer;
+        }
     }
 }
-// .modal-section.active{
-//     width: 100%;
-//     transform: scale(1);
-//     transform-origin: left;
 
-//     .modal-box{
-//         display: block;
-//     }
-// }
+.product-card-accordion.active {
+    border: 2px solid $secondary !important;
+
+    .card-details-box{
+        padding: 20px !important;
+        height: auto !important;
+    }
+    .span{
+        color: $secondary !important;
+    }
+}
+
+.bookmark.bookmark-active{
+    svg circle{
+        fill: $secondary !important;
+    }
+    svg path{
+        fill: $white !important;
+    }
+    p{
+        color: $secondary !important;
+    }
+}
+//hover states common
+.cyan-button:hover, .got-btn:hover{
+    background: $secondary !important;
+}
+.bookmark:hover{
+    svg circle{
+        fill: hsla(0, 0%, 48%, 0.95) !important;
+    }
+    p{
+        color: hsla(0, 0%, 48%, 0.8) !important;
+    }
+}
+
+//media query
+@media screen and (max-width: 600px){
+    ::-webkit-scrollbar {
+        width: 5px;
+      }
+    .hero{
+        .navbar{
+            .menu-icon{
+                display: block;
+                width: 20px;
+            }
+            nav{
+                display: none;
+            }
+        }
+    }
+    .all-cards{
+        width: 360px;
+        margin: -60px auto;
+
+        .card{
+            max-width: 98%;
+
+            .title{
+                font-size: 1.6rem;
+                padding: 0 20px;
+            }
+            .bookmark p{
+                display: none;
+            }
+        }
+    }
+    .count-card{
+        .count-section{
+            flex-direction: column;
+            text-align: center;
+
+            .counts{
+                margin: 0 !important;
+                padding: 20px 0 !important;
+            }
+            .second{
+                border-left: 0 !important;
+                border-right: 0 !important;
+                border-top: 1px solid rgb(209, 209, 209);
+                border-bottom: 1px solid rgb(209, 209, 209);
+            }
+        }
+    }
+    .about-card{
+        .about-section{
+            .about-title{
+                font-size: 1.4rem;
+            }
+        }
+    }
+    .product-card{
+        padding: 20px !important;
+
+        .product-title, .details{
+            flex-direction: column;
+            align-items: flex-start !important;
+        }
+        .reward{
+            margin-top: 30px;
+        }
+    }
+    .modal-section{
+        .modal-box{
+            width: 300px !important;
+            .product-card{
+                .card-content{
+                    width: 200px;
+                }
+            }
+    
+            .modal-card{
+                .card-content{
+                    width: 200px;
+                }
+            }
+            .product-card-accordion{
+                .count{
+                    display: none;
+                }
+                .card-content-title{
+                    flex-direction: column;
+                    align-items: flex-start;
+                    span{
+                        margin-left: 0 !important;
+                    }
+                }
+            }
+        }
+        .success-modal-box{
+            width: 300px;
+        }
+    }
+}

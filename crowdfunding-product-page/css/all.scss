@@ -45,7 +45,7 @@ hr{
     height: 1px;
     border: none;
 }
-.menu-icon{
+.menu-icon, .close-icon{
     display: none;
 }
 .count-mobile{
@@ -53,6 +53,7 @@ hr{
 }
 .out-of-stock-card{
     border: 1px solid #eeeeee90;
+
     .product-title{
         color: $darkGray;
         span{
@@ -86,6 +87,7 @@ hr{
     border-radius: 50%;
     border: 1px solid rgb(209, 209, 209);
     margin-right: 30px;
+    position: relative;
 }
 .hero{
     background: linear-gradient(to top, transparent, rgba(0,0,0,0.3)), url(../images/image-hero-desktop.jpg);
@@ -465,6 +467,16 @@ hr{
     .span{
         color: $secondary !important;
     }
+    .circle::after{
+        content : '';
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background: $primary;
+        position: absolute;
+        top: 5px;
+        left: 5px;
+    }
 }
 
 .bookmark.bookmark-active{
@@ -490,11 +502,22 @@ hr{
         color: hsla(0, 0%, 48%, 0.8) !important;
     }
 }
-
+.content-div{
+    display: flex;
+}
 //media query
 @media screen and (max-width: 600px){
     ::-webkit-scrollbar {
         width: 5px;
+      }
+      .count-mobile{
+          display: block;
+          margin: 20px 0;
+          
+          span{
+              font-weight: 400;
+              color: $darkGray;
+          }
       }
     .hero{
         .navbar{
@@ -505,8 +528,56 @@ hr{
             nav{
                 display: none;
             }
+            .mobile-nav-bg{
+                background: rgba(0,0,0,0.4);
+                width: 100%;
+                position: fixed;
+                min-height: 100vh;
+                top: 0;
+                left: 0;
+                display: none;
+                justify-content: center;
+                padding-top: 150px;
+                transition: 0.5s;
+                z-index: 10;
+
+                .close-icon{
+                    display: block;
+                    position: absolute;
+                    top: 30px;
+                    right: 30px;
+                    width: 20px !important;
+                }
+
+                nav.show-nav{
+                    display: block;
+                    // position: fixed;
+                    width: 360px;
+                    background: white;
+                    border-radius: $borderRadius;
+                    top: 80px;
+                    height: 180px;
+                    
+                    li:last-child{
+                        border-bottom: none !important;
+                    }
+    
+                    li{
+                        display: block;
+                        padding: 20px 10px;
+                        margin-right: 0;
+                        border-bottom: 1px solid rgb(209, 209, 209);
+                    }
+                    
+                    li a{
+                        font-weight: 500;
+                        color: black;
+                    }
+                }
+            }
         }
     }
+
     .all-cards{
         width: 360px;
         margin: -60px auto;
@@ -561,6 +632,8 @@ hr{
     .modal-section{
         .modal-box{
             width: 300px !important;
+            // min-height: 100vh;
+
             .product-card{
                 .card-content{
                     width: 200px;
@@ -588,5 +661,23 @@ hr{
         .success-modal-box{
             width: 300px;
         }
+        .card-details-box{
+            flex-direction: column;
+            text-align: center;
+            p{
+                padding: 20px 0;
+            }
+        }
     }
+    .out-of-stock-accordion{
+        display: block;
+        .content-div{
+            display: flex;
+        }
+        .product-title{
+            display: flex;
+            font-size: 1rem;
+        }
+    }
+
 }

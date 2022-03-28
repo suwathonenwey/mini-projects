@@ -32,6 +32,13 @@ for(let i=0; i< cyanButtons.length; i++){
     })
 }
 
+//if user click out of the modal, close
+window.onclick = function(event){
+    if(event.target == modalSection){
+        modalSection.style.display = "none";
+    }
+}
+
 //loop continue btns and see which products to buy
 for(let i=0; i<continueBtn.length; i++){
     continueBtn[i].addEventListener("click", function(){
@@ -49,4 +56,16 @@ document.querySelector(".got-btn").onclick = function(){
 //bookmark active
 document.getElementById("bookmark").addEventListener("click", () => {
     document.getElementById("bookmark").classList.toggle("bookmark-active");
-})
+});
+
+//show mobile navbar
+document.querySelector(".menu-icon").onclick = function(){
+    document.getElementById("mobile-nav-bg").style.display = "flex";
+    this.style.display = "none";
+}
+
+//close mobile navbar
+document.querySelector(".close-icon").onclick = function(){
+    document.getElementById("mobile-nav-bg").style.display = "none";
+    document.querySelector(".menu-icon").style.display = "block";
+}

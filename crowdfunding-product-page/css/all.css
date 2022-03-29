@@ -719,6 +719,9 @@ hr {
   .product-card .reward {
     margin-top: 30px;
   }
+  .modal-section {
+    padding-top: 80px;
+  }
   .modal-section .modal-box {
     width: 300px !important;
   }
@@ -743,6 +746,9 @@ hr {
   .modal-section .modal-box .product-card-accordion .card-content-title span {
     margin-left: 0 !important;
   }
+  .modal-section .modal-box .product-card-accordion .card-details-box {
+    margin-top: 0;
+  }
   .modal-section .success-modal-box {
     width: 300px;
   }
@@ -752,9 +758,13 @@ hr {
         -ms-flex-direction: column;
             flex-direction: column;
     text-align: center;
+    margin-top: 50px;
   }
   .modal-section .card-details-box p {
     padding: 20px 0;
+  }
+  .modal-section .card-details-box .got-btn {
+    margin-bottom: 20px;
   }
   .out-of-stock-accordion {
     display: block;

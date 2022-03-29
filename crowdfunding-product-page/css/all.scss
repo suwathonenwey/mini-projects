@@ -630,6 +630,7 @@ hr{
         }
     }
     .modal-section{
+        padding-top: 80px;
         .modal-box{
             width: 300px !important;
             // min-height: 100vh;
@@ -656,6 +657,9 @@ hr{
                         margin-left: 0 !important;
                     }
                 }
+                .card-details-box{
+                    margin-top: 0;
+                }
             }
         }
         .success-modal-box{
@@ -664,8 +668,13 @@ hr{
         .card-details-box{
             flex-direction: column;
             text-align: center;
+            margin-top: 50px;
+
             p{
                 padding: 20px 0;
+            }
+            .got-btn{
+                margin-bottom: 20px;
             }
         }
     }

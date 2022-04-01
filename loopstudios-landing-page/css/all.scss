@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap');
+
+//colors
+$white: hsl(0, 0%, 100%);
+$black : hsl(0, 0%, 0%);
+$darkGray : hsl(0, 0%, 55%);
+$veryDarkGray : hsl(0, 0%, 41%);
+
+$title : uppercase;
+$mainPadding : 40px 12%;
+//mixins
+@mixin dFlexCenter($align, $justify, $direction) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    flex-direction: $direction;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Alata', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+//custom scroll bar
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: $veryDarkGray; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: $veryDarkGray; 
+  }
+
+  body{
+      background: $white;
+  }
+
+.intro{
+    background: linear-gradient(rgba(0,0,0,0.3)) ,url(../images/desktop/image-hero.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80vh;
+    padding: $mainPadding;
+
+    .navbar{
+        @include dFlexCenter(center, space-between, row)
+    }
+    .logo-img{
+        width: 230px;
+    }
+    nav ul{
+        list-style: none;
+
+        li{
+            display: inline-block;
+            margin-right: 30px;
+        }
+        li a {
+            text-decoration: none;
+            color: $white;
+            font-weight: bold;
+            font-size: 18px;
+        }
+    }
+    .content{
+        margin-top: 250px;
+        border: 4px solid $white;
+        padding: 60px;
+        width: 700px;
+
+        p{
+            text-transform: $title;
+            color: $white;
+            font-size: 5rem;
+        }
+    }
+}
+
+.carrers{
+    padding: $mainPadding;
+    position: relative;
+
+    .carrer-img{
+        margin: 100px 0;
+        width: 1000px;
+    }
+    .carrers-content{
+        position: absolute;
+        width: 500px;
+        padding: 100px;
+        background-color: $white;
+        right: 180px;
+        bottom: 120px;
+
+        .title{
+            text-transform: $title;
+            font-size: 2.5rem;
+            letter-spacing: 0.1rem;
+            margin-bottom: 20px;
+        }
+        .paragraph{
+            color: $veryDarkGray;
+            font-weight: bold;
+            font-weight: 18px;
+            line-height: 1.5rem;
+        }
+    }
+}
+
+.events{
+    padding: $mainPadding;
+    .header{
+        @include dFlexCenter(center, space-between, row);
+        
+        .heading{
+            text-transform: $title;
+            font-size: 2.5rem;
+        }
+        .see-all{
+            padding: 10px 40px;
+            border: 2px solid $black;
+            text-transform: $title;
+            font-weight: bold;
+        }
+    }
+}
+
+.products{
+    padding: $mainPadding;
+
+    .product-grid{
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        gap: 30px;
+
+        .grid-item{
+            position: relative !important;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.8));
+            transition: 0.8s;
+
+            .grid-image{
+                width: 100%;
+                object-fit: cover;
+                opacity: 0.6;
+            }
+
+            .photo-text{
+                position: absolute;
+                text-transform: $title;
+                color: $white;
+                bottom: 40px;
+                font-size: 3rem;
+                left: 20px;
+                width: 250px;
+            }
+        }
+
+        .grid-item:hover{
+            background: linear-gradient(rgba(255, 255, 255, 0.5));
+        }
+    }
+}
+
+.support{
+    @include dFlexCenter(center, space-between, row);
+
+    padding: $mainPadding;
+    background: $black;
+
+    .nav-section{
+        nav ul{
+            list-style: none;
+            margin-top: 30px;
+    
+            li{
+                display: inline-block;
+                margin-right: 30px;
+            }
+            li a {
+                text-decoration: none;
+                color: $white;
+                font-weight: bold;
+                font-size: 18px;
+            }
+        }
+    }
+
+    .social-section{
+        text-align: right;
+        
+        .icons{
+            display: flex;
+            img{
+                margin-right: 30px;
+            }
+        }
+        .footer-text{
+            color: $darkGray;
+        }
+    }
+}

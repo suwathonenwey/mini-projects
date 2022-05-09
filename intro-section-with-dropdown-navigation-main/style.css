@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+
+:root{
+ --near-white: hsl(0, 0%, 98%);
+ --medium-gray: hsl(0, 0%, 41%);
+ --near-black: hsl(0, 0%, 8%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Epilogue', sans-serif;
+}
+body{
+    background-color: var(--near-white)
+}
+.navbar{
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar .logo{
+    cursor: pointer;
+}
+.navbar nav{
+    margin-right: auto;
+    margin-left: 50px;
+}
+.navbar nav .nav-link{
+    text-decoration: none;
+    color: var(--medium-gray);
+    margin-right: 25px;
+    transition: 0.4s;
+}
+.button{
+    border: none;
+    outline: none;
+    appearance: none;
+    background: none;
+    font-size: 17px;
+
+    color: var(--medium-gray);
+    padding: 15px 30px;
+}
+.button.register{
+    border: 2px solid var(--medium-gray);
+    border-radius: 18px;
+}
+.main-part{
+    margin-top: 30px;
+    padding: 0 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+.left-side{
+    width: 500px;
+}
+.left-side .heading{
+    font-size: 4.7rem;
+    color: var(--near-black);
+    font-weight: bold;
+}
+.left-side .paragraph{
+    line-height: 1.8rem;
+    color: var(--medium-gray);
+    margin: 80px 50px 80px 0;
+    font-size: 18px;
+}
+.left-side .learn-more{
+    background-color: var(--near-black);
+    color: var(--near-white);
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    border: 1px solid black;
+}
+.left-side .logos{
+    margin-top: 80px;
+}
+.left-side .logos img{
+    margin-right: 15px;
+}
+.right-side{
+    width: 550px;
+}
+.right-side img{
+    width: 100%;
+}
+button{
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+/* hover and active states */
+.button:hover{
+    color: var(--near-black);
+}
+.learn-more:hover{
+    background-color: var(--near-white);
+}
+.register:hover{
+    border: 2px solid var(--near-black);
+}
+.navbar nav .nav-link:hover{
+    color: var(--near-black);
+}

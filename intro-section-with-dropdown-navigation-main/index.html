@@ -35,8 +35,19 @@
      <div class="navbar">
        <div class="logo"><img src="./images/logo.svg" alt=""></div>
        <nav>
-         <a href="#" class="nav-link">Features <img src="./images/icon-arrow-down.svg" class="down-arrow" alt=""></a>
-         <a href="#" class="nav-link">Company <img src="./images/icon-arrow-down.svg" class="down-arrow" alt=""></a>
+         <a href="#" class="nav-link" id="feature">Features <img src="./images/icon-arrow-down.svg" class="down-arrow" alt=""></a>
+         <ul class="feature-dropdown dropdown" id="feature-dropdown">
+           <li><img src="./images/icon-todo.svg" alt="">Todo List</li>
+           <li><img src="./images/icon-calendar.svg" alt="">Calendar</li>
+           <li><img src="./images/icon-reminders.svg" alt="">Reminders</li>
+           <li><img src="./images/icon-planning.svg" alt="">Planning</li>
+         </ul>
+         <a href="#" class="nav-link" id="company">Company <img src="./images/icon-arrow-down.svg" class="down-arrow" alt=""></a>
+         <ul class="company-dropdown dropdown" id="company-dropdown">
+           <li>History</li>
+           <li>Our Team</li>
+           <li>Blog</li>
+         </ul>
          <a href="#" class="nav-link">Careers</a>
          <a href="#" class="nav-link">About</a>
        </nav>
@@ -69,5 +80,8 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
+
+  <script src="app.js"></script>
+  
 </body>
 </html>

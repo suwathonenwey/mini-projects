@@ -107,3 +107,38 @@ button{
 .navbar nav .nav-link:hover{
     color: var(--near-black);
 }
+
+/* dropdowns */
+.dropdown{
+    padding: 20px;
+    background-color: white;
+    border-radius: 15px;
+    position: absolute;
+    top: 80px;
+    filter: drop-shadow(0 5px 0.3rem rgb(221, 221, 221));
+    transition: 0.4s;
+}
+.dropdown li{
+    list-style: none;
+    color: var(--medium-gray);
+    margin-bottom: 15px;
+}
+.dropdown li img{
+    margin-right: 10px;
+}
+.dropdown li:last-child{
+    margin-bottom: 0;
+}
+.dropdown.company-dropdown{
+    display: none;
+    left: 280px;
+}
+.dropdown.feature-dropdown{
+    display: none;
+    left: 100px;
+}
+
+/* class for making blocks */
+.block{
+    display: block !important;
+}

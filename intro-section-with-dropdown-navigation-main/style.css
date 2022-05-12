@@ -85,6 +85,11 @@ body{
 }
 .right-side{
     width: 550px;
+    background-image: url(./images/image-hero-desktop.png);
+    height: 700px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 85%;
 }
 .right-side img{
     width: 100%;
@@ -141,4 +146,102 @@ button{
 /* class for making blocks */
 .block{
     display: block !important;
+}
+
+/* individual code for sidebar */
+.sidebar-div{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.sidebar-bg{
+    display: none;
+}
+.menu-icon, .close-icon{
+    display: none;
+}
+@media screen and (max-width: 1100px){
+    .main-part{
+        align-items: center;
+    }
+    .buttons{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 720px){
+    .container{
+        position: relative;
+    }
+    .menu-icon{
+        display: block;
+    }
+    .sidebar-div{
+        display: none;
+        display: block;
+        position: fixed;
+        width: 70%;
+        background: white;
+        height: 100vh;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 10;
+    }
+    .close-icon{
+        display: block;
+        text-align: right;
+        width: 30px;
+        margin: 20px 20px 20px auto;
+    }
+    .sidebar-bg{
+        display: none;
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        background: #00000070;
+    }
+    .show.sidebar-bg, .show.sidebar-div{
+        display: block;
+    }
+    nav{
+        display: flex;
+        flex-direction: column;
+    }
+    nav .nav-link{
+        margin-bottom: 30px;
+    }
+    .main-part{
+        flex-direction: column-reverse;
+    }
+    .left-side{
+        text-align: center;
+    }
+    .left-side .heading{
+        font-size: 3rem;
+        margin-top: 30px;
+    }
+    .left-side .paragraph{
+        margin: 30px;
+    }
+    .left-side .logos{
+        margin: 40px 0;
+    }
+    .right-side{
+        background-image: url(./images/image-hero-mobile.png);
+        height: 300px;
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 470px){
+    .right-side{
+        width: 100%;
+        background-size: 100%;
+    }
 }

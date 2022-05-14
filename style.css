@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+:root{
+    --pale-violet: hsl(276, 100%, 81%);
+    --moderate-violet: hsl(276, 55%, 52%);
+    --desaturated-dark-violet: hsl(271, 15%, 43%);
+    --grayish-blue: hsl(206, 6%, 79%);
+    --main-heading: hsl(271, 36%, 24%);
+    --paragraph: hsl(270, 7%, 64%);
+    --light-magenta: hsl(293, 100%, 63%);
+    --light-violet: hsl(264, 100%, 61%);
+    --white: hsl(0, 0%, 100%);
+    --app-background: hsl(270, 20%, 96%);
+    --submit-btn: hsl(271, 36%, 24%);
+    --radio-btn-outline: hsl(289, 100%, 72%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--app-background);
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+/* css for two cylinders */
+.first-bg{
+    position: absolute;
+    height: 900px;
+    width: 610px;
+    border-bottom-left-radius: 500px;
+    border-bottom-right-radius: 500px;
+    left: -100px;
+    top: 0;
+    background: linear-gradient(var(--light-magenta), var(--light-violet));
+}
+.second-bg{
+    position: absolute;
+    background: linear-gradient(hsl(264, 100%, 61%, 0.05),hsl(293, 100%, 63%, 0.05));
+    width: 610px;
+    height: 900px;
+    right: -100px;
+    border-top-left-radius: 500px;
+    border-top-right-radius: 500px;
+    top: 200px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    padding-top: 200px;
+}
+/* main div for phone and content */
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1000px;
+    z-index: 10;
+}
+/* the whole phone css */
+.phone{
+    width: 300px;
+    height: 600px;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0 0 10px grey;
+    padding: 15px;
+}
+.chat-app{
+    background: var(--app-background);
+    height: 100%;
+    border-radius: 25px;
+    overflow: hidden;
+}
+/* the head section */
+.head{
+    width: 100%;
+    height: 90px;
+    background: linear-gradient(to right, var(--light-violet), var(--light-magenta));
+    border-radius: 8px;
+}
+.white-bar{
+    width: 60%;
+    height: 34px;
+    background: white;
+    border-radius: 14px;
+    text-align: center;
+    margin: -15px auto 0 auto;
+}
+.avatar-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+}
+.avatar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: auto;
+    margin-left: 15px;
+}
+.avatar img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+.avatar div{
+    margin-left: 10px;
+}
+.avatar .name{
+    font-size: 15px;
+    color: var(--app-background);
+    font-weight: bold;
+}
+.avatar .status{
+    color: var(--pale-violet);
+    font-size: 10px;
+}
+/* make a distance between texts and chat-app */
+.text{
+    width: 60%;
+    padding: 7px;
+    border-radius: 7px;
+    font-size: 10px;
+}
+.my{
+    margin: 10px 10px 10px auto;
+}
+/* app-text section */
+.app-text{
+    background: hsl(276, 100%, 81%, 0.3);
+    color: var(--moderate-violet);
+    margin: 10px;
+    text-align: left;
+}
+
+/* photo section */
+.my-photo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.my-photo img{
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    margin-right: 5px;
+}
+/* my text section */
+.my-text{
+    background-color: white;
+    color: var(--paragraph);
+}
+
+/* content css */
+.content{
+    width: 500px;
+}
+.content h3{
+    color: var(--main-heading);
+    margin-bottom: 25px;
+    font-size: 2.8rem;
+}
+.content p{
+    color: var(--paragraph);
+    line-height: 1.8rem;
+    font-size: 1.2rem;
+}

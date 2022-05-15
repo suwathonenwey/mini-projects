@@ -228,3 +228,32 @@ body{
     line-height: 1.8rem;
     font-size: 1.2rem;
 }
+
+@media screen and (max-width: 1100px){
+    .first-bg, .second-bg{
+        width: 50%;
+    }
+    .container{
+        padding-top: 100px;
+    }
+    .main{
+        flex-direction: column;
+    }
+    .phone{
+        margin-bottom: 50px;
+    }
+    .content{
+        text-align: center;
+    }
+}
+@media screen and (max-width: 470px){
+    .container{
+        padding-top: 25px;
+    }
+    .first-bg{
+        height: 500px;
+    }
+    .content{
+        width: 90%;
+    }
+}

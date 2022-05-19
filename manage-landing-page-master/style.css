@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap');
+
+:root{
+    --bright-red: hsl(12, 88%, 59%);
+    --dark-blue: hsl(228, 39%, 23%);
+    --dark-grayish-blue: hsl(227, 12%, 61%);
+    --very-dark-blue: hsl(233, 12%, 13%);
+    --very-pale-red: hsl(13, 100%, 96%);
+    --very-light-gray: hsl(0, 0%, 98%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+.first-div{
+    background-image: url(./images/bg-simplify-section-desktop.svg);
+    background-repeat: no-repeat;
+    padding: 30px 10%;
+    height: 100vh;
+}
+.nav-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav{
+    display: flex;
+    align-items: center;
+}
+nav a{
+    margin-right: 20px;
+    text-decoration: none;
+    color: var(--very-dark-blue);
+    font-size: 16px;
+}
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 80px;
+}
+.content{
+    width: 700px;
+}
+.content h1{
+    color: var(--dark-blue);
+    font-size: 4rem;
+}
+.content p{
+    width: 400px;
+    color: var(--dark-grayish-blue);
+    font-size: 18px;
+    line-height: 1.8rem;
+    margin: 25px 0;
+}
+.main-image{
+    flex: 1;
+}
+.main-image img{
+    width: 100%;
+}
+
+.second-div{
+    padding: 30px 10%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.difference-content{
+    width: 550px;
+}
+.difference-content h3{
+    font-size: 3rem;
+    color: var(--dark-blue);
+    margin-bottom: 20px;
+}
+.difference-content p{
+    font-size: 18px;
+    color: var(--dark-grayish-blue);
+    line-height: 1.8rem;
+    width: 380px;
+}
+.facts{
+    width: 700px;
+}
+.fact{
+    display: flex;
+    align-items: flex-start;
+}
+.number{
+    background-color: var(--bright-red);
+    padding: 12px 25px;
+    border-radius: 25px;
+    color: white;
+    margin-right: 30px;
+}
+.fact-content h4{
+    padding-top: 12px;
+    color: var(--dark-blue);
+    font-size: 1.3rem;
+}
+.fact-content p{
+    color: var(--dark-grayish-blue);
+    font-size: 18px;
+    line-height: 1.8rem;
+    margin: 20px 0;
+}
+
+/* common classes */
+.btn{
+    border: none;
+    outline: none;
+    appearance: none;
+
+    color: var(--very-light-gray);
+    padding: 20px 30px;
+    border-radius: 30px;
+    background-color: var(--bright-red);
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 3px 10px var(--bright-red);
+}
